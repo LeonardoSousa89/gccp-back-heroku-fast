@@ -1,0 +1,28 @@
+{
+  "name": "gccp-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-proxy": "! pgrep cloud_sql_proxy > /dev/null && cloud_sql_proxy -dir=/cloudsql -instances=$INSTANCE_CONNECTION_NAME &",
+    "start": "node index.js",
+    "dev":"nodemon index.js",
+    "appinit":"gcloud init",
+    "appdeploy":"gcloud app deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "knex": "^2.2.0",
+    "pg": "^8.8.0",
+    "postgres": "^3.2.4",
+    "sqlite": "^4.1.2"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.19"
+  }
+}
