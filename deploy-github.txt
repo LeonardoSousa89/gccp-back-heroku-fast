@@ -1,0 +1,7 @@
+echo "# gccp-back-heroku-fast" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/LeonardoSousa89/gccp-back-heroku-fast.git
+git push -u origin main

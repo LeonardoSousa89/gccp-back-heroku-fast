@@ -14,4 +14,3 @@ server.route('/').get(async(req, res)=>{
 
 module.exports=server 
 
-//res.status(200).json(response)

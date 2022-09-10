@@ -5,17 +5,17 @@
  * 
  */
 
-//  let {environment}=require('./.env')
+ require('dotenv').config()
 
 module.exports = {
 
   production: {
     client: 'postgresql',
     connection: {
-            host:'ec2-44-210-36-247.compute-1.amazonaws.com',
-            user:'ikfzqcivuwtvnz',
-            password:'42f3bb29149d75581514e0cecf56fbacb594ede500daa15a44137fa7f0361707',
-            database:'d8ki94ot9piqpu',
+            host: process.env.DB_HOST,
+            user: process.env.DB_USER,
+            password: process.env.DB_PASSWORD,
+            database: process.env.DB_DATABASE,
             ssl:{ rejectUnauthorized: false }
     },
     pool: {
